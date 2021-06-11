@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom'
+import { Layout } from 'antd'
+import 'antd/dist/antd.css'
+import Footers from './conponents/footer/Footers'
+import Headers from './conponents/header/Headers'
+import Main from './conponents/main/Main'
+import Menus from './conponents/menu/Menus'
+import Account from './conponents/account/Account'
+import Login from './conponents/account/Login'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router className="App">
+      <Layout style={{ minHeight: '100vh' }}>
+        <Menus></Menus>
+        <Layout className="site-layout">
+          <Headers />
+          <Main />
+          <Footers />
+        </Layout>
+        {/* <Login/> */}
+        {/* <Account/> */}
+      </Layout>
+    </Router>
+  )
 }
 
-export default App;
+export default App

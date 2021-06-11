@@ -1,0 +1,13 @@
+.ant-layout-header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.ant-avatar {
+  margin: 16px 4px 16px 0;
+}
+
+.ant-layout-header p{
+    margin: 0;
+}
